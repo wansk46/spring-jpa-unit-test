@@ -15,8 +15,10 @@ public class SingleEntityController {
     private SingleEntityRepository parkingBoyRepository;
 
     @GetMapping
-    public ResponseEntity<String> getResult(){
-        return ResponseEntity.ok("ok");
+    public ResponseEntity<SingleEntity> getResult(){
+        SingleEntity singleEntity = new SingleEntity();
+        singleEntity.name = "ABC";
+        return ResponseEntity.ok(singleEntity);
     }
 
 }
